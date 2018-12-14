@@ -1,0 +1,49 @@
+<testsuite errors="0" failures="0" hostname="vivelab15" name="test_resources.features.translate.Translate from ENG to SPA and SPA to ENG" skipped="2" tests="4" time="23.089786" timestamp="2018-12-03T12:06:16.585029"><testcase classname="test_resources.features.translate.Translate from ENG to SPA and SPA to ENG" name="English to Spanish: Insert as text cat on the transtale input and see as translation the text in spanish gato -- @1.1 " status="passed" time="11.337726"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @wip @slow
+  Scenario Outline: English to Spanish: Insert as text cat on the transtale input and see as translation the text in spanish gato -- @1.1 
+    Given Juan is on Google Translate searching by traductor ingles a espanol and using the webbrowser CHROME ... passed in 5.922s
+    When Juan try to translate from english to spanish cat ... passed in 0.075s
+    Then Juan should see gato ... passed in 5.341s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="test_resources.features.translate.Translate from ENG to SPA and SPA to ENG" name="English to Spanish: Insert as text dog on the transtale input and see as translation the text in spanish perro -- @1.2 " status="passed" time="11.75206"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @wip @slow
+  Scenario Outline: English to Spanish: Insert as text dog on the transtale input and see as translation the text in spanish perro -- @1.2 
+    Given Juan is on Google Translate searching by traductor ingles a espanol and using the webbrowser FIREFOX ... passed in 6.297s
+    When Juan try to translate from english to spanish dog ... passed in 0.083s
+    Then Juan should see perro ... passed in 5.372s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="test_resources.features.translate.Translate from ENG to SPA and SPA to ENG" name="Spanish to English: Insert as text gato on the transtale input and see as translation the text in english cat -- @1.1 " status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Spanish to English: Insert as text gato on the transtale input and see as translation the text in english cat -- @1.1 
+    Given Juan is on Google Translate searching by translate spanish to  english and using the webbrowser CHROME ... skipped in 0.000s
+    When Juan try to translate from english to spanish gato ... skipped in 0.000s
+    Then Juan should see cat ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="test_resources.features.translate.Translate from ENG to SPA and SPA to ENG" name="Spanish to English: Insert as text perro on the transtale input and see as translation the text in english dog -- @1.2 " status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Spanish to English: Insert as text perro on the transtale input and see as translation the text in english dog -- @1.2 
+    Given Juan is on Google Translate searching by translate spanish to  english and using the webbrowser FIREFOX ... skipped in 0.000s
+    When Juan try to translate from english to spanish perro ... skipped in 0.000s
+    Then Juan should see dog ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
