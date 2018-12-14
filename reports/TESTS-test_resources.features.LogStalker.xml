@@ -1,0 +1,30 @@
+<testsuite errors="1" failures="0" hostname="vivelab15" name="test_resources.features.LogStalker.Log stalker" skipped="0" tests="1" time="132.333993" timestamp="2018-12-14T17:09:58.663001"><testcase classname="test_resources.features.LogStalker.Log stalker" name="Search for words Ebay PROCESS: ps4 Ebay PROCESS: xbox one x Ebay PROCESS: nintendo switch -- @1.1 " status="failed" time="132.333993"><error message="'Actor' object has no attribute 'shouldFinish'" type="AttributeError">
+<![CDATA[
+Failing step: Then All the process should be in ok state ... failed in 0.001s
+Location: test/test_resources/features/LogStalker.feature:15
+Traceback (most recent call last):
+  File "c:\users\juan~1.res\desktop\python~1\testing\protot~1\rpaaut~1\env\lib\site-packages\behave\model.py", line 1329, in run
+    match.run(runner.context)
+  File "c:\users\juan~1.res\desktop\python~1\testing\protot~1\rpaaut~1\env\lib\site-packages\behave\matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "test\steps\giftListSteps.py", line 29, in step_impl
+    Robot.shouldFinish(
+AttributeError: 'Actor' object has no attribute 'shouldFinish'
+]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Search for words Ebay PROCESS: ps4 Ebay PROCESS: xbox one x Ebay PROCESS: nintendo switch -- @1.1 
+    Given Robot runs giftList\\Flowchart1.xaml in UIPath ... passed in 0.016s
+    When Robot do the Ebay PROCESS: ps4 process ... passed in 40.904s
+    And Robot do the Ebay PROCESS: xbox one x process ... passed in 36.709s
+    And Robot do the Ebay PROCESS: nintendo switch process ... passed in 36.410s
+    And Robot do the Amazon PROCESS: ps4 process ... passed in 6.564s
+    And Robot do the Amazon PROCESS: xbox one x process ... passed in 6.071s
+    And Robot do the Amazon PROCESS: nintendo switch process ... passed in 5.659s
+    Then All the process should be in ok state ... failed in 0.001s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

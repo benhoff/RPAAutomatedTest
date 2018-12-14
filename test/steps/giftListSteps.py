@@ -1,46 +1,27 @@
 import sys
 sys.path.append("..")
 from actor import Actor
+from abilities.customAbilities import runRPATask
+from tasks.customTasks import run
+from tasks.customTasks import executeThe
 
 Robot=None
 
-@given(u'Robot runs {task} in {RPATool} and logs in {thefile}')
-def step_impl(context,task,RPATool,thefile):
+@given(u'Robot runs {task} in {RPATool}')
+def step_impl(context,task,RPATool):
     global Robot
     Robot=Actor(named='BotMarley')
-    Robot.can(runRPATask,using=RPATool,andLogginIn=thefile)
+    Robot.can(runRPATask)
     Robot.wasAbleTo(
         run(The=task)
     )
 
-
-@when(u'Robot do the {first} process')
-def step_impl(context,first):
-    # logfile = open("C:\\Users\\ryzen2600x\\Desktop\\python playground\\experimentacionextrema\\loggertest\\Overwatch.log","r")
-    # loglines = follow(logfile)
-    # for line in loglines:
-    #     print (line)
-    #     if 'hello' in line:
-    #         return
+@when(u'Robot do the {current} process')
+def step_impl(context,current):
 
     Robot.attemptsTo(
-        executeThe,Process=first
+        executeThe,Process=current
     )
-
-    # raise NotImplementedError(u'STEP: When The log stalker find hello fucking and world')
-
-# @when(u'Robot do the {second} process')
-# def step_impl(context,second):
-#     Robot.attemptsTo(
-#         executeThe,Process=second
-#     )
-
-
-# @when(u'Robot do the {third} process')
-# def step_impl(context,third):
-#     Robot.attemptsTo(
-#         executeThe,Process=third
-#     )
 
 @then(u'All the process should be in {one} state')
 def step_impl(context,one):

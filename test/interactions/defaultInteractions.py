@@ -1,9 +1,12 @@
 import time
-def follow(thefile):
-    thefile.seek(0,2)
-    while True:
-        line = thefile.readline()
-        if not line:
-            time.sleep(0.1)
-            continue
-        yield line
+from logDriver import LogDriver
+
+def tailAndWaitFor(log : LogDriver, theWord):
+    # loglines=follow()
+    loglines=log().follow()
+
+    for line in loglines:
+        if theWord in line:
+            return
+        elif 'execution ended' in line: raise Exception(f'Test execution is stopped prematurely: {line}')
+        elif 'Error {"message":' in line: raise Exception(f'Error: {line}')

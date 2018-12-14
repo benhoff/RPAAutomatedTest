@@ -1,20 +1,19 @@
-from selenium import webdriver
-from interactions.customInteractions import clickOnSearchButton
-from interactions.customInteractions import writeOnSearchBar
-from interactions.customInteractions import writeOnSourceLanguageInputThe
-from questions.googleTranslateQuestions import checkTheTranslation
+import os
+from testConfig import config
+import getpass
+from glob import glob
+from logDriver import LogDriver
+from interactions.defaultInteractions import tailAndWaitFor 
 
+def run(**kwargs):
+    RPATaskFolder=config['RPA_TASK_FOLDER']
+    task=kwargs['The']
+    robotRunnerPath=glob(f'C:\\Users\\{getpass.getuser()}\\AppData\\Local\\UiPath\\app-*')[0]
+    os.popen(f'{robotRunnerPath}\\UiRobot.exe /file:"{RPATaskFolder}{task}"')
+    return LogDriver
 
-def translate(driver : webdriver.Chrome,**kwargs) -> webdriver:
-    writeOnSourceLanguageInputThe(driver,kwargs['The'])
-
-def AsTranslation(driver : webdriver.Chrome,**kwargs) -> webdriver:
-    checkTheTranslation(driver,kwargs['The'])
-
-def  goToGoogleTranslate(driver : webdriver.Chrome,**kwargs) -> webdriver:
-    writeOnSearchBar(driver,kwargs['SearchingBy'])
-    clickOnSearchButton(driver)
-
+def executeThe(log : LogDriver,**kwargs) -> LogDriver:
+    tailAndWaitFor(log,kwargs['Process'])
 
 if __name__=='__main__':
     writeOnSearchBar()

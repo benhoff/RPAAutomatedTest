@@ -8,7 +8,7 @@ class Actor(object):
         sys.path.append(config['BASE_DIR'])
         self.named=named
         self.systemUnderTest=None
-
+        self.helper=None
 
     def attemptsTo(self,*args,**kwargs):
         self.performs(*args,**kwargs)
@@ -21,6 +21,7 @@ class Actor(object):
     def can(self,Ability,*args,**kwargs):
         execute=Ability(**kwargs)
         if execute: self.systemUnderTest=execute
+
 
     def performs(self,*args,**kwargs):
         for arg in args:
