@@ -1,7 +1,5 @@
 import os
 
-DEFAULT_DRIVER='/googleTranslateAutomatedTest/resources/drivers/chromedriver'
-
 config = {
     'BASE_DIR':os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     'RPA_TOOl':'UIPath',
