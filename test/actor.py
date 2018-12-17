@@ -29,6 +29,9 @@ class Actor(object):
     
     def finish(self,*args,**kwargs):
         self.systemUnderTest.close()
+
+    def should(self,*args,**kwargs):
+        self.performs(*args,**kwargs)
     
 if __name__=='__main__':
     pass

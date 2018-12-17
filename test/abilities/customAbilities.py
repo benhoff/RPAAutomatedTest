@@ -15,7 +15,8 @@ def runRPATask(**usingAndLogginIn):
     sys.path.append(config['BASE_DIR'])
     try:
         if usingAndLogginIn['using'] and usingAndLogginIn['andLogginIn']:
-            pass
+            deafultRPATool=usingAndLogginIn['using']
+            logFilePath=usingAndLogginIn['andLogginIn']
     except KeyError:
         pass
     if 'uipath' in deafultRPATool.lower():
