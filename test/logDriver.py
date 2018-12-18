@@ -4,6 +4,8 @@ from testConfig import config
 from collections import deque
 
 class LogDriver(object):
+    #TODO: Remote Testing\SSH
+    #TODO: Timeout\Optional
     def __init__(self,*args,**kwargs):
         try:
             self.thefile=open(f"{config['LOG_PATH']}{self.todayDateExecutionLog()}_Execution.log")
@@ -24,12 +26,10 @@ class LogDriver(object):
             yield line
         
     def getNLinesBeforeTheEnd(self,*args,**kwargs):
-        time.sleep(3)
+        time.sleep(1)
         return str(deque(self.thefile,maxlen=8))
 
     def close():
         pass
 
-# if __name__=="__main__":
-#     filee=open("C:\\Users\\juan.restrepo\\AppData\\Local\\UiPath\\Logs\\2018-12-17_Execution.log")
-#     print(deque(filee,maxlen=6))
+

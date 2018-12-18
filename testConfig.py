@@ -4,8 +4,8 @@ config = {
     'BASE_DIR':os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     'RPA_TOOl':'UIPath',
     'LOG_PATH':'C:\\Users\\juan.restrepo\\AppData\\Local\\UiPath\\Logs\\',
-    'RPA_TASK_FOLDER':'C:\\Users\\juan.restrepo\\Desktop\\JC\\training\\laboratory-solutions\\juan.restrepo\\Laboratory 2\\UI\\',
-    'TEST_RESULTS_FOLDER': ['C:\\Users\\juan.restrepo\\Desktop\\JC\\training\\laboratory-solutions\\juan.restrepo\\Laboratory 2\\UI\\giftList\\']
+    'RPA_TASK_FOLDER':'C:\\Users\\juan.restrepo\\Desktop\\JC\\laboratory-solutions\\juan.restrepo\\Laboratory 2\\UI\\',
+    'TEST_RESULTS_FOLDER': ['C:\\Users\\juan.restrepo\\Desktop\\JC\\laboratory-solutions\\juan.restrepo\\Laboratory 2\\UI\\giftList\\']
 }
 
 if __name__=="__main__":
