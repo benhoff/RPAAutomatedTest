@@ -4,7 +4,7 @@ from logDriver import LogDriver
 
 def tailAndWaitFor(log : LogDriver, theWord):
     loglines=log().follow()
-
+    
     for line in loglines:
         if theWord in line:
             return
