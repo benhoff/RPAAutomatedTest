@@ -1,30 +1,47 @@
-<testsuite errors="1" failures="0" hostname="vivelab15" name="test_resources.features.LogStalker.Log stalker" skipped="0" tests="1" time="132.333993" timestamp="2018-12-14T17:09:58.663001"><testcase classname="test_resources.features.LogStalker.Log stalker" name="Search for words Ebay PROCESS: ps4 Ebay PROCESS: xbox one x Ebay PROCESS: nintendo switch -- @1.1 " status="failed" time="132.333993"><error message="'Actor' object has no attribute 'shouldFinish'" type="AttributeError">
-<![CDATA[
-Failing step: Then All the process should be in ok state ... failed in 0.001s
-Location: test/test_resources/features/LogStalker.feature:15
-Traceback (most recent call last):
-  File "c:\users\juan~1.res\desktop\python~1\testing\protot~1\rpaaut~1\env\lib\site-packages\behave\model.py", line 1329, in run
-    match.run(runner.context)
-  File "c:\users\juan~1.res\desktop\python~1\testing\protot~1\rpaaut~1\env\lib\site-packages\behave\matchers.py", line 98, in run
-    self.func(context, *args, **kwargs)
-  File "test\steps\giftListSteps.py", line 29, in step_impl
-    Robot.shouldFinish(
-AttributeError: 'Actor' object has no attribute 'shouldFinish'
-]]>
-</error><system-out>
+<testsuite errors="0" failures="0" hostname="vivelab9" name="test_resources.features.LogStalker.Search for products in Ebay and Amazon page" skipped="0" tests="2" time="110.023341" timestamp="2018-12-18T12:01:10.945228"><testcase classname="test_resources.features.LogStalker.Search for products in Ebay and Amazon page" name="giftListBot read gifts.txt and runs: Ebay PROCESS: ps4, Ebay PROCESS: xbox one x, Ebay PROCESS: nintendo switch, Amazon PROCESS: ps4, Amazon PROCESS: xbox one x, Amazon PROCESS: nintendo switch Processes -- @1.1 " status="passed" time="69.95642"><system-out>
 <![CDATA[
 @scenario.begin
-  Scenario Outline: Search for words Ebay PROCESS: ps4 Ebay PROCESS: xbox one x Ebay PROCESS: nintendo switch -- @1.1 
-    Given Robot runs giftList\\Flowchart1.xaml in UIPath ... passed in 0.016s
-    When Robot do the Ebay PROCESS: ps4 process ... passed in 40.904s
-    And Robot do the Ebay PROCESS: xbox one x process ... passed in 36.709s
-    And Robot do the Ebay PROCESS: nintendo switch process ... passed in 36.410s
-    And Robot do the Amazon PROCESS: ps4 process ... passed in 6.564s
-    And Robot do the Amazon PROCESS: xbox one x process ... passed in 6.071s
-    And Robot do the Amazon PROCESS: nintendo switch process ... passed in 5.659s
-    Then All the process should be in ok state ... failed in 0.001s
+  Scenario Outline: giftListBot read gifts.txt and runs: Ebay PROCESS: ps4, Ebay PROCESS: xbox one x, Ebay PROCESS: nintendo switch, Amazon PROCESS: ps4, Amazon PROCESS: xbox one x, Amazon PROCESS: nintendo switch Processes -- @1.1 
+    Given All the residual files have been deleted ... passed in 0.002s
+    Given Robot runs giftList\\Flowchart1.xaml for gifts.txt in UIPath ... passed in 0.008s
+    When Robot do the Ebay PROCESS: ps4 process ... passed in 38.581s
+    And Robot do the Ebay PROCESS: xbox one x process ... passed in 5.944s
+    And Robot do the Ebay PROCESS: nintendo switch process ... passed in 6.546s
+    And Robot do the Amazon PROCESS: ps4 process ... passed in 6.650s
+    And Robot do the Amazon PROCESS: xbox one x process ... passed in 5.552s
+    And Robot do the Amazon PROCESS: nintendo switch process ... passed in 5.648s
+    Then All the process should be in Finished OK state ... passed in 1.022s
+    And Robot should put the Amazon information in the CSV Files ... passed in 0.002s
+    And Robot should put the Ebay information in the CSV Files ... passed in 0.001s
 
 @scenario.end
 --------------------------------------------------------------------------------
+
+Captured stdout:
+True
+
+]]>
+</system-out></testcase><testcase classname="test_resources.features.LogStalker.Search for products in Ebay and Amazon page" name="giftListBot read gifts2.txt and runs: Ebay PROCESS: rocket launcher, Ebay PROCESS: flamethrower, Ebay PROCESS: elton john, Amazon PROCESS: rocket launcher, Amazon PROCESS: flamethrower, Amazon PROCESS: elton john Processes -- @1.2 " status="passed" time="40.066921"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: giftListBot read gifts2.txt and runs: Ebay PROCESS: rocket launcher, Ebay PROCESS: flamethrower, Ebay PROCESS: elton john, Amazon PROCESS: rocket launcher, Amazon PROCESS: flamethrower, Amazon PROCESS: elton john Processes -- @1.2 
+    Given All the residual files have been deleted ... passed in 0.004s
+    Given Robot runs giftList\\Flowchart1.xaml for gifts2.txt in UIPath ... passed in 0.005s
+    When Robot do the Ebay PROCESS: rocket launcher process ... passed in 10.192s
+    And Robot do the Ebay PROCESS: flamethrower process ... passed in 6.647s
+    And Robot do the Ebay PROCESS: elton john process ... passed in 6.446s
+    And Robot do the Amazon PROCESS: rocket launcher process ... passed in 5.246s
+    And Robot do the Amazon PROCESS: flamethrower process ... passed in 5.144s
+    And Robot do the Amazon PROCESS: elton john process ... passed in 5.347s
+    Then All the process should be in Finished OK state ... passed in 1.034s
+    And Robot should put the Amazon information in the CSV Files ... passed in 0.001s
+    And Robot should put the Ebay information in the CSV Files ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+True
+
 ]]>
 </system-out></testcase></testsuite>
