@@ -1,0 +1,38 @@
+
+📦RPAAutomatedTest
+ ┣ 📂.git
+ ┣ 📂env
+ ┣ 📂reports
+ ┃ ┣ 📜TESTS-test_resources.features.LogStalker.xml
+ ┃ ┗ 📜TESTS-test_resources.features.LogStalker.xml.html
+ ┣ 📂resources
+ ┃ ┗ 📂drivers
+ ┃ ┃ ┗ 📜drivers.py
+ ┣ 📂test
+ ┃ ┣ 📂abilities
+ ┃ ┃ ┣ 📜customAbilities.py
+ ┃ ┃ ┗ 📜defaultAbilities.py
+ ┃ ┣ 📂interactions
+ ┃ ┃ ┣ 📜customInteractions.py
+ ┃ ┃ ┗ 📜defaultInteractions.py
+ ┃ ┣ 📂questions
+ ┃ ┃ ┗ 📜giftListRobotQuestions.py
+ ┃ ┣ 📂steps
+ ┃ ┃ ┣ 📜environmentSteps.py
+ ┃ ┃ ┗ 📜giftListSteps.py
+ ┃ ┣ 📂tasks
+ ┃ ┃ ┣ 📜customTasks.py
+ ┃ ┃ ┗ 📜defaultTasks.py
+ ┃ ┣ 📂test_resources
+ ┃ ┃ ┗ 📂features
+ ┃ ┃ ┃ ┗ 📜LogStalker.feature
+ ┃ ┣ 📂userinterface
+ ┃ ┃ ┗ 📂pages
+ ┃ ┃ ┃ ┗ 📜pageName.py
+ ┃ ┣ 📜actor.py
+ ┃ ┗ 📜logDriver.py
+ ┣ 📂utils
+ ┃ ┗ 📜fileUtils.py
+ ┣ 📜.gitignore
+ ┣ 📜requirements.txt
+ ┗ 📜testConfig.py
