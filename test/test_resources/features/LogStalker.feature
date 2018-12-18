@@ -1,12 +1,12 @@
 Feature: Search for products in Ebay and Amazon page
 
-   giftListBot search a list of products in ebay and amazon page, after that he writes information about the products in different CSV files
+    The giftListBot searches for a list of products on the Ebay website and the Amazon website, then writes information about product prices in different CSV files
 
     Background: There are no residual files of any previous execution of the giftListbot
         Given All the residual files have been deleted
 
 
-    Scenario Outline: giftListBot read <File> and runs: <first> <second> <third> <fourth> <fifth> <sixth>
+    Scenario Outline: giftListBot read <File> and runs: <first>, <second>, <third>, <fourth>, <fifth>, <sixth> Processes
 
         Given Robot runs <task> for <File> in <RPATool>
 
@@ -26,4 +26,4 @@ Feature: Search for products in Ebay and Amazon page
         Examples:
         |   task                        | File          | RPATool  | first                          | second                        | third                             | fourth                           | fifth                          | sixth                             | one         |
         |   giftList\\Flowchart1.xaml   | gifts.txt     | UIPath   | Ebay PROCESS: ps4              | Ebay PROCESS: xbox one x      | Ebay PROCESS: nintendo switch     | Amazon PROCESS: ps4              | Amazon PROCESS: xbox one x     | Amazon PROCESS: nintendo switch   | Finished OK |
-        |   giftList\\Flowchart1.xaml   | gifts2.txt    | UIPath   | Ebay PROCESS: rocket launcher  | Ebay PROCESS: flamethrower    | Ebay PROCESS: elton john          | Amazon PROCESS: rocket launcher  | Amazon PROCESS: flamethrower   | Amazon PROCESS: elton john vinyl  | Finished OK |
+        |   giftList\\Flowchart1.xaml   | gifts2.txt    | UIPath   | Ebay PROCESS: rocket launcher  | Ebay PROCESS: flamethrower    | Ebay PROCESS: elton john          | Amazon PROCESS: rocket launcher  | Amazon PROCESS: flamethrower   | Amazon PROCESS: elton john        | Finished OK |
