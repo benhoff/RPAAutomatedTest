@@ -8,13 +8,8 @@ from tasks.customTasks import finishTheExecution
 from questions.giftListRobotQuestions import amazonInformation
 from questions.giftListRobotQuestions import ebayInformation
 from utils.fileUtils import deleteFiles
-from behave.model import Feature
 
 Robot=None
-
-def before_scenario(context,scenario):
-    a=2/0
-    deleteFiles('TEST_RESULTS_FOLDER','*.CSV')
 
 @given(u'Robot runs {task} for {File} in {RPATool}')
 def step_impl(context,task,RPATool,File):
@@ -51,6 +46,4 @@ def step_impl(context):
         ebayInformation
     )
 
-def after_scenario(context, scenario):
-    deleteFiles('TEST_RESULTS_FOLDER','*.CSV')
 

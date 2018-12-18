@@ -1,8 +1,12 @@
 Feature: Search for products in Ebay and Amazon page
 
-   giftList bot search a list of products in ebay and amazon page, after that he writes information about the products in different CSV files
+   giftListBot search a list of products in ebay and amazon page, after that he writes information about the products in different CSV files
 
-    Scenario Outline: giftList Bot read <File> and runs: <first> <second> <third> <fourth> <fifth> <sixth>
+    Background: There are no residual files of any previous execution of the giftListbot
+        Given All the residual files have been deleted
+
+
+    Scenario Outline: giftListBot read <File> and runs: <first> <second> <third> <fourth> <fifth> <sixth>
 
         Given Robot runs <task> for <File> in <RPATool>
 
@@ -16,6 +20,7 @@ Feature: Search for products in Ebay and Amazon page
         Then All the process should be in <one> state
         And Robot should put the Amazon information in the CSV Files
         And Robot should put the Ebay information in the CSV Files
+
 
 
         Examples:
