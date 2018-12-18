@@ -1,7 +1,7 @@
 import os
-from testConfig import config
 import getpass
 from glob import glob
+from testConfig import config
 from logDriver import LogDriver
 from interactions.defaultInteractions import tailAndWaitFor 
 from interactions.defaultInteractions import tailNAndSearchFor

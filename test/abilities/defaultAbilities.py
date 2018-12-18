@@ -1,7 +1,8 @@
-from tasks.defaultTasks import openBrowser
 import sys
 sys.path.append("..")
+
 from testConfig import config
+from tasks.defaultTasks import openBrowser
 
 def browseTheWeb(**withBrowser):
     deafultUrl=config['DEFAULT_URL']

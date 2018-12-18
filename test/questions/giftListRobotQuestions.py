@@ -1,5 +1,6 @@
-from testConfig import config
 from glob import glob
+
+from testConfig import config
 
 def amazonInformation(*args,**kwargs):
     CSVFiles=glob(f'{config["TEST_RESULTS_FOLDER"][0]}\\Amazon*.csv')
@@ -9,7 +10,6 @@ def amazonInformation(*args,**kwargs):
             if not ('Column2' in content and 'Column1' in content): print(f'Not data in file: {amazonCSV}')
             assert('Column1' in content)
             assert('Column2' in content)
-
 
 def ebayInformation(*args,**kwargs):
     CSVFiles=glob(f'{config["TEST_RESULTS_FOLDER"][0]}\\ebay*.csv')

@@ -1,4 +1,5 @@
 import time
+
 from logDriver import LogDriver
 
 def tailAndWaitFor(log : LogDriver, theWord):

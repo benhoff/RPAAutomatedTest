@@ -1,10 +1,11 @@
-import sys
 import os
+import sys
 sys.path.append("..")
-from testConfig import config
+
 import distutils.spawn
 import getpass
 from logDriver import LogDriver
+from testConfig import config
 
 def is_tool(name):
     return distutils.spawn.find_executable(name) is not None
