@@ -6,7 +6,7 @@ Feature: Search for products in Ebay and Amazon page
         Given All the residual files have been deleted
 
 
-    Scenario Outline: giftListBot read <File> and runs: <first>, <second>, <third>, <fourth>, <fifth>, <sixth> Processes
+    Scenario Outline: Read <File> and runs:<first>,<second>,<third>,<fourth>,<fifth>,<sixth>Processes
 
         Given Robot runs <task> for <File> in <RPATool>
 
@@ -26,4 +26,4 @@ Feature: Search for products in Ebay and Amazon page
         Examples:
         |   task                        | File          | RPATool  | first                          | second                        | third                             | fourth                           | fifth                          | sixth                             | one         |
         |   giftList\\Flowchart1.xaml   | gifts.txt     | UIPath   | Ebay PROCESS: ps4              | Ebay PROCESS: xbox one x      | Ebay PROCESS: nintendo switch     | Amazon PROCESS: ps4              | Amazon PROCESS: xbox one x     | Amazon PROCESS: nintendo switch   | Finished OK |
-        |   giftList\\Flowchart1.xaml   | gifts2.txt    | UIPath   | Ebay PROCESS: rocket launcher  | Ebay PROCESS: flamethrower    | Ebay PROCESS: elton john          | Amazon PROCESS: rocket launcher  | Amazon PROCESS: flamethrower   | Amazon PROCESS: elton john        | Finished OK |
+        |   giftList\\Flowchart1.xaml   | gifts2.txt    | UIPath   | Ebay PROCESS: boston vinyl     | Ebay PROCESS: the doors       | Ebay PROCESS: elton john          | Amazon PROCESS: boston vinyl     | Amazon PROCESS: the doors      | Amazon PROCESS: elton john        | Finished OK |
