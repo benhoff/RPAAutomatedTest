@@ -7,6 +7,7 @@ from interactions.defaultInteractions import tailAndWaitFor
 from interactions.defaultInteractions import tailNAndSearchFor
 
 def run(**kwargs):
+    #TODO: Sacar un arg parser para los argumentos de un robot x con key as key y value as value
     task=kwargs['The']
     try:
         File=kwargs['For']
