@@ -28,7 +28,7 @@ pipeline {
                         """
                     
                     sh """
-                        .env/Scripts/activate
+                        .env\Scripts\activate
                         python -m pip install -r requirements.txt
                         """
             }
