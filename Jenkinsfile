@@ -25,9 +25,11 @@ pipeline {
                 echo 'Testing'
                     sh """
                         python -m virtualenv env
-                        .\\env\\Scripts\\activate
+                        """
+                    
+                    sh """
+                        . .env/Scripts/activate
                         python -m pip install -r requirements.txt
-
                         """
             }
         }
