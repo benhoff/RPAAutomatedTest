@@ -20,10 +20,15 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
+        stage('Create virtual env') {
             steps {
                 echo 'Testing'
-                bat 'python --version'
+                    sh """
+                        python -m virtualenv env
+                        .\\env\\Scripts\\activate
+                        python -m pip install -r requirements.txt
+
+                        """
             }
         }
         stage('Deploy') {
