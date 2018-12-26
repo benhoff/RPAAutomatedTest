@@ -5,17 +5,17 @@ pipeline {
 
     stages {
 
-        stage ("Code pull"){
+        stage ("Test pull"){
             steps{
                 echo 'checkout the Test'
                 checkout scm
             }
         }
 
-        stage('Build') {
+        stage('Robot Pull') {
             steps {
                 echo 'checkout the robot'
-                dir('the robot') {
+                dir('Robot') {
                 git branch: 'master', url: 'https://github.com/petoandroide/giftList'
                 }
             }
@@ -23,6 +23,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing'
+                bat 'python --version'
             }
         }
         stage('Deploy') {
