@@ -28,6 +28,7 @@ pipeline {
                         """
                     
                     sh """
+                        #!/bin/bash
                         cd env
                         cd Scripts
                         activate
