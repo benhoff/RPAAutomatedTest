@@ -28,7 +28,8 @@ pipeline {
                         """
                     
                     sh """
-                        cd .\\env\\Scripts\\
+                        cd env
+                        cd Scripts
                         activate.ps1
                         python -m pip install -r requirements.txt
                         """
