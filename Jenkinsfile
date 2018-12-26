@@ -30,7 +30,7 @@ pipeline {
                     sh """
                         cd env
                         cd Scripts
-                        activate.ps1
+                        activate
                         python -m pip install -r requirements.txt
                         """
             }
