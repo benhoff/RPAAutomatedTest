@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo 'Testing'
                 withPythonEnv('C:\\Program Files\\Python37\\python') {
-	                bat 'behave test'
+	                bat 'behave test --junit'
                 }
             }
         }
