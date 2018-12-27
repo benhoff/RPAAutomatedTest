@@ -4,8 +4,8 @@ config = {
     'BASE_DIR':os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     'RPA_TOOl':'UIPath',
     'LOG_PATH':'C:\\Users\\ryzen2600x\\AppData\\Local\\UiPath\\Logs\\',
-    'RPA_TASK_FOLDER':'C:\\Users\\ryzen2600x\\Desktop\\python playground\\uipathrobots\\',
-    'TEST_RESULTS_FOLDER': ['C:\\Users\\ryzen2600x\\Desktop\\python playground\\uipathrobots\\giftList\\']
+    'RPA_TASK_FOLDER':'C:\\jenkins\\workspace\\RPAAutomatedTest_master\\',
+    'TEST_RESULTS_FOLDER': ['C:\\jenkins\\workspace\\RPAAutomatedTest_master\\giftList\\']
 }
 
 # config = {

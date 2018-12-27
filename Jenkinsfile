@@ -15,7 +15,7 @@ pipeline {
         stage('Robot Pull') {
             steps {
                 echo 'checkout the robot'
-                dir('Robot') {
+                dir('giftList') {
                 git branch: 'master', url: 'https://github.com/petoandroide/giftList'
                 }
             }
