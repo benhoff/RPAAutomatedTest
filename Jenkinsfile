@@ -23,7 +23,7 @@ pipeline {
         stage('Create virtual env') {
             steps {
                 echo 'Testing'
-                withPythonEnv('C:\\Users\\ryzen2600x\\Desktop\\python playground\\experimentacionextrema\\loggertest\\RPAAutomatedTest\\env\\Scripts\\python') {
+                withPythonEnv('C:\\Program Files\\Python37\\python') {
 	                // Creates the virtualenv before proceeding
 	                bat 'pip install -r requirements.txt'
                 }
