@@ -22,27 +22,19 @@ pipeline {
         }
         stage('Create virtual env') {
             steps {
-                echo 'Testing'
+                echo 'Downloading dependencies'
                 withPythonEnv('C:\\Program Files\\Python37\\python') {
-	                // Creates the virtualenv before proceeding
 	                bat 'pip install -r requirements.txt'
                 }
-                    // sh """
-                    //     python -m virtualenv env
-                    //     """
-                    
-                    // sh """
-                    //     #!/bin/bash
-                    //     cd env
-                    //     cd Scripts
-                    //     activate
-                    //     python -m pip install -r requirements.txt
-                        // """
+
             }
         }
-        stage('Deploy') {
+        stage('Testing') {
             steps {
-                echo 'Deploying'
+                echo 'Testing'
+                withPythonEnv('C:\\Program Files\\Python37\\python') {
+	                bat 'behave test'
+                }
             }
         }
     }
