@@ -41,6 +41,10 @@ pipeline {
     post {
         always {
             echo 'This will always run'
+            echo 'Generating test report'
+            withPythonEnv('C:\\Program Files\\Python37\\python') {
+                bat 'python -m junit2htmlreport .\\reports\\TESTS-test_resources.features.LogStalker.xml'
+            }
         }
         success {
             echo 'This will run only if successful'
