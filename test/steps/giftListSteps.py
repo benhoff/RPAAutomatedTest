@@ -1,10 +1,10 @@
 import sys
 sys.path.append("..")
 from actor import Actor
-from abilities.customAbilities import runRPATask
-from tasks.customTasks import run
-from tasks.customTasks import executeThe
-from tasks.customTasks import finishTheExecution
+from abilities.defaultAbilities import runRPATask
+from tasks.defaultTasks import run
+from tasks.defaultTasks import executeThe
+from tasks.defaultTasks import finishTheExecution
 from questions.giftListRobotQuestions import amazonInformation
 from questions.giftListRobotQuestions import ebayInformation
 from utils.fileUtils import deleteFiles
@@ -17,7 +17,7 @@ def step_impl(context,task,RPATool,File):
     Robot=Actor(named='BotMarley')
     Robot.can(runRPATask)
     Robot.wasAbleTo(
-        run(The=task,For=File)
+        run(The=task,withArgs={'csvFileToRead':File})
     )
 
 @when(u'Robot do the {current} process')
