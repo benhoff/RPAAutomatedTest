@@ -47,13 +47,16 @@ pipeline {
             }
         }
         success {
-            echo 'This will run only if successful'
-        }
+            echo 'This will run only if failed'
+            mail to: 'juan.restrepo@digitalamericas.ai',
+            subject: "Succeed Pipeline: ${currentBuild.fullDisplayName}",
+            body: "To find pipeline execution details: ${env.BUILD_URL}"        }
         failure {
             echo 'This will run only if failed'
             mail to: 'juan.restrepo@digitalamericas.ai',
             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
             body: "Something is wrong with ${env.BUILD_URL}"
+            ${FILE,path=".\\reports\\TESTS-test_resources.features.LogStalker.xml.html"}
         }
         unstable {
             echo 'This will run only if the run was marked as unstable'
