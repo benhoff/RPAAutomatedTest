@@ -11,4 +11,4 @@ config = {
 
 if __name__=="__main__":
     pass
-    print(config['BASE_DIRO'])
+    print(config['BASE_DIR'])
