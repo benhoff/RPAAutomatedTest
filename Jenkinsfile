@@ -58,19 +58,11 @@ pipeline {
             //     subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
             //     // body: "Something is wrong with ${env.BUILD_URL}",
             //     body: '${FILE,path=".\\reports\\TESTS-test_resources.features.LogStalker.xml.html"}'
-
-
-            stage('Email') {
-                steps {
-                    script {
-                        emailext body: '${FILE,path=".\\reports\\TESTS-test_resources.features.LogStalker.xml.html"}',
-                        mimeType: 'text/html',
-                        subject: "[Jenkins] ${currentBuild.fullDisplayName}",
-                        to: "juan.restrepo@digitalamericas.ai",
-                        recipientProviders: [[$class: 'CulpritsRecipientProvider']]
-                    }
-                }
-            }
+            emailext body: '${FILE,path=".\\reports\\TESTS-test_resources.features.LogStalker.xml.html"}',
+                mimeType: 'text/html',
+                subject: "[Jenkins] ${currentBuild.fullDisplayName}",
+                to: "juan.restrepo@digitalamericas.ai",
+                recipientProviders: [[$class: 'CulpritsRecipientProvider']]  
         }
         unstable {
             echo 'This will run only if the run was marked as unstable'
