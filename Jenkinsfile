@@ -63,13 +63,10 @@ pipeline {
             stage('Email') {
                 steps {
                     script {
-                        def mailRecipients = 'juan.restrepo@digitalamericas.ai',
-                        def jobName = currentBuild.fullDisplayName,
                         emailext body: '${FILE,path=".\\reports\\TESTS-test_resources.features.LogStalker.xml.html"}',
                         mimeType: 'text/html',
-                        subject: "[Jenkins] ${jobName}",
-                        to: "${mailRecipients}",
-                        replyTo: "${mailRecipients}",
+                        subject: "[Jenkins] ${currentBuild.fullDisplayName}",
+                        to: "juan.restrepo@digitalamericas.ai",
                         recipientProviders: [[$class: 'CulpritsRecipientProvider']]
                     }
                 }
