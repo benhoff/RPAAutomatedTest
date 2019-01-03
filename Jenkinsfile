@@ -58,9 +58,9 @@ pipeline {
             //     subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
             //     // body: "Something is wrong with ${env.BUILD_URL}",
             //     body: '${FILE,path=".\\reports\\TESTS-test_resources.features.LogStalker.xml.html"}'
-            emailext body: '${FILE,path=".\\reports\\TESTS-test_resources.features.LogStalker.xml.html"}',
+            emailext body: '${FILE,path="./reports/TESTS-test_resources.features.LogStalker.xml.html"}',
                 mimeType: 'text/html',
-                subject: "[Jenkins] ${currentBuild.fullDisplayName}",
+                subject: "[Jenkins] Failed Pipeline: ${currentBuild.fullDisplayName}",
                 to: "juan.restrepo@digitalamericas.ai",
                 recipientProviders: [[$class: 'CulpritsRecipientProvider']]  
         }
