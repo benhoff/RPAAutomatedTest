@@ -16,7 +16,6 @@ def run(The=None,withArgs=None,**kwargs):
 
     RPATaskFolder=config['RPA_TASK_FOLDER']
     robotRunnerPath=glob(f'C:\\Users\\{getpass.getuser()}\\AppData\\Local\\UiPath\\app-*')[0]
-    print(f'{robotRunnerPath}\\UiRobot.exe /file:"{RPATaskFolder}{task}" /input:"{argx}"')
     if argx: os.popen(f'{robotRunnerPath}\\UiRobot.exe /file:"{RPATaskFolder}{task}" /input:"{argx}"')
     else: os.popen(f'{robotRunnerPath}\\UiRobot.exe /file:"{RPATaskFolder}{task}"')
     return LogDriver

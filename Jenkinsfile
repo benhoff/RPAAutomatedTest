@@ -47,18 +47,15 @@ pipeline {
             }
         }
         success {
-            echo 'This will run only if failed'
-            mail to: 'juan.restrepo@digitalamericas.ai',
-            subject: "Succeed Pipeline: ${currentBuild.fullDisplayName}",
-            body: "To find pipeline execution details: ${env.BUILD_URL}"        }
+            echo 'This will run only if succeed'
+            emailext body: "To find pipeline execution details: ${env.BUILD_URL}" + '${FILE,path="./reports/TESTS-test_resources.features.LogStalker.xml.html"}',
+                mimeType: 'text/html',
+                subject: "[Jenkins] Succeed Pipeline: ${currentBuild.fullDisplayName}",
+                to: "juan.restrepo@digitalamericas.ai",
+                recipientProviders: [[$class: 'CulpritsRecipientProvider']]         }
         failure {
             echo 'This will run only if failed'
-            // mail to: 'juan.restrepo@digitalamericas.ai',
-            //     mimeType: 'text/html',
-            //     subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-            //     // body: "Something is wrong with ${env.BUILD_URL}",
-            //     body: '${FILE,path=".\\reports\\TESTS-test_resources.features.LogStalker.xml.html"}'
-            emailext body: '${FILE,path="./reports/TESTS-test_resources.features.LogStalker.xml.html"}',
+            emailext body: "To find pipeline execution details: ${env.BUILD_URL}" + '${FILE,path="./reports/TESTS-test_resources.features.LogStalker.xml.html"}',
                 mimeType: 'text/html',
                 subject: "[Jenkins] Failed Pipeline: ${currentBuild.fullDisplayName}",
                 to: "juan.restrepo@digitalamericas.ai",
