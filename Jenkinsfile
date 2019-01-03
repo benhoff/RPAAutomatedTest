@@ -54,9 +54,9 @@ pipeline {
         failure {
             echo 'This will run only if failed'
             mail to: 'juan.restrepo@digitalamericas.ai',
-            subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-            // body: "Something is wrong with ${env.BUILD_URL}",
-            body: '${FILE,path=".\\reports\\TESTS-test_resources.features.LogStalker.xml.html"}'2
+                subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+                // body: "Something is wrong with ${env.BUILD_URL}",
+                body: '${FILE,path=".\\reports\\TESTS-test_resources.features.LogStalker.xml.html"}'
         }
         unstable {
             echo 'This will run only if the run was marked as unstable'
