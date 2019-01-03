@@ -64,7 +64,7 @@ pipeline {
                 steps {
                     script {
                         def mailRecipients = 'juan.restrepo@digitalamericas.ai',
-                        def jobName = currentBuild.fullDisplayName
+                        def jobName = currentBuild.fullDisplayName,
                         emailext body: '${FILE,path=".\\reports\\TESTS-test_resources.features.LogStalker.xml.html"}',
                         mimeType: 'text/html',
                         subject: "[Jenkins] ${jobName}",
