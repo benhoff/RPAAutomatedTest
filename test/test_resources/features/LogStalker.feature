@@ -25,5 +25,5 @@ Feature: Search for products in Ebay and Amazon page
 
         Examples:
         |   task                        | File          | RPATool  | first                          | second                        | third                             | fourth                           | fifth                          | sixth                             | one         |
-        |   giftList\\Flowchart1.xaml   | gifts.txt     | UIPath   | Ebay PROCESS: ps4              | Ebay PROCESS: xbox one x      | Ebay PROCESS: nintendo switch     | Amazon PROCESS: ps4              | Amazon PROCESS: xbox one x     | Amazon PROCESS: nintendo switch   | Finished OK |
-        |   giftList\\Flowchart1.xaml   | gifts2.txt    | UIPath   | Ebay PROCESS: boston vinyl     | Ebay PROCESS: the doors       | Ebay PROCESS: elton john          | Amazon PROCESS: boston vinyl     | Amazon PROCESS: the doors      | Amazon PROCESS: elton john        | Finished OK |
+        |   Flowchart1.xaml   | gifts.txt     | UIPath   | Ebay PROCESS: ps4              | Ebay PROCESS: xbox one x      | Ebay PROCESS: nintendo switch     | Amazon PROCESS: ps4              | Amazon PROCESS: xbox one x     | Amazon PROCESS: nintendo switch   | Finished OK |
+        |   Flowchart1.xaml   | gifts2.txt    | UIPath   | Ebay PROCESS: boston vinyl     | Ebay PROCESS: the doors       | Ebay PROCESS: elton john          | Amazon PROCESS: boston vinyl     | Amazon PROCESS: the doors      | Amazon PROCESS: elton john        | Finished OK |
