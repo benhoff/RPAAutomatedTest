@@ -8,11 +8,12 @@ class LogDriver(object):
     #TODO: Remote Testing\SSH
     #TODO: Timeout\Optional
     def __init__(self,*args,**kwargs):
+        if not config['AA_TASK_NAME']: config['AA_TASK_NAME'] = ''
         try:
-            self.thefile=open(f"{config['LOG_PATH']}{self.todayDateExecutionLog()}_Execution.log")
+            self.thefile=open(f"{config['LOG_PATH']}{self.todayDateExecutionLog()}_{config['AA_TASK_NAME']}Execution.log")
         except FileNotFoundError:
             time.sleep(5)
-            self.thefile=open(f"{config['LOG_PATH']}{self.todayDateExecutionLog()}_Execution.log")
+            self.thefile=open(f"{config['LOG_PATH']}{self.todayDateExecutionLog()}_{config['AA_TASK_NAME']}Execution.log")
 
         try:
             self.timeOut=kwargs['timeOut']
