@@ -6,7 +6,9 @@ def tailAndWaitFor(log : LogDriver, theWord):
     loglines=log().follow()
     
     for line in loglines:
-        print(line)
+        # print(line)
+        # print(theWord)
+        # print(theWord in line)
         if theWord in line:
             return
         elif 'error' in line.lower(): raise Exception(f'Error: {line}')

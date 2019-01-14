@@ -6,7 +6,7 @@ Feature: Get logged in Office365
         Given All the residual files have been deleted
 
 
-    Scenario Outline: Read <File> and runs:<first>,<second>,<third>,<fourth>,<fifth>,<sixth>Processes
+    Scenario Outline: Read <File> and runs:<first>,<second>,<third>,<fourth> Processes
 
         Given Robot runs <task> for <File>
 
@@ -22,4 +22,3 @@ Feature: Get logged in Office365
         Examples:
         |   task                        | File                       |   first                        | second                               | third                                 | fourth                           | loggedStatus |
         |   1.Office365Loggin.atmx      | 1.Office365Loggin.xlsx     | Open the browser: Chrome       | Browse to office 365 login page      | Insert data in office365 login inputs | Succesful login in office365     | Logged |
-        |   1.Office365Loggin.atmx      | 1.Office365Loggin2.xlsx    | Open the browser: Chrome       | Browse to office 365 login page      | Insert data in office365 login inputs | Succesful login in office365     | Logged |

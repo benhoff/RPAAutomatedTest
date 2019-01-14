@@ -23,7 +23,9 @@ def step_impl(context,current):
 
 @then(u'Robot should {getLogged}')
 def step_impl(context,getLogged):
-    raise NotImplementedError(u'STEP: Then Robot should {getLogged}')
+    Robot.attemptsTo(
+        executeThe,Process=getLogged
+    )   
 
 @then(u'the excel column status should be {loggedStatus}')
 def step_impl(context,loggedStatus):
