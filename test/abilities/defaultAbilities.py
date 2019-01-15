@@ -23,7 +23,9 @@ def runRPATask(**usingAndLogginIn):
     if 'uipath' in deafultRPATool.lower():
         if is_tool(f'C:\\Users\\{getpass.getuser()}\\AppData\\Local\\UiPath\\UiPath.Agent.exe') and os.path.isdir(logFilePath):
             return LogDriver
-
+    elif 'automationanywhere' in deafultRPATool.lower():
+        if is_tool(f'C:\\Program Files (x86)\\Automation Anywhere\\Enterprise\\Client\\Automation Anywhere.exe') and os.path.isdir(logFilePath):
+            return LogDriver
     raise Exception('Check RPATool or log folder')
 
 

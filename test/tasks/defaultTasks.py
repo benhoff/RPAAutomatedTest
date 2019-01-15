@@ -12,13 +12,17 @@ def argParser(kwargs):
 
 def run(The=None,withArgs=None,**kwargs):
     task=The
-    argx=argParser(withArgs)
-
+    deafultRPATool=config['RPA_TOOl']
     RPATaskFolder=config['RPA_TASK_FOLDER']
-    robotRunnerPath=glob(f'C:\\Users\\{getpass.getuser()}\\AppData\\Local\\UiPath\\app-*')[0]
-    print(f'{robotRunnerPath}\\UiRobot.exe /file:"{RPATaskFolder}{task}" /input:"{argx}"')
-    if argx: os.popen(f'{robotRunnerPath}\\UiRobot.exe /file:"{RPATaskFolder}{task}" /input:"{argx}"')
-    else: os.popen(f'{robotRunnerPath}\\UiRobot.exe /file:"{RPATaskFolder}{task}"')
+
+    if 'uipath' in deafultRPATool.lower():
+        argx=argParser(withArgs)
+        robotRunnerPath=glob(f'C:\\Users\\{getpass.getuser()}\\AppData\\Local\\UiPath\\app-*')[0]
+        if argx: robotRunnerCommand=f'{robotRunnerPath}\\UiRobot.exe /file:"{RPATaskFolder}{task}" /input:"{argx}"'
+        else: robotRunnerCommand=f'{robotRunnerPath}\\UiRobot.exe /file:"{RPATaskFolder}{task}"'
+    elif 'automationanywhere' in deafultRPATool.lower(): robotRunnerCommand=f'{RPATaskFolder}{task}'
+    
+    os.popen(robotRunnerCommand)
     return LogDriver
 
 def executeThe(log : LogDriver,**kwargs) -> LogDriver:
