@@ -22,7 +22,8 @@ def run(The=None,withArgs=None,**kwargs):
         else: robotRunnerCommand=f'{robotRunnerPath}\\UiRobot.exe /file:"{RPATaskFolder}{task}"'
     elif 'automationanywhere' in deafultRPATool.lower(): robotRunnerCommand=f'{RPATaskFolder}{task}'
     
-    os.popen(robotRunnerCommand)
+    os.popen(f'"{robotRunnerCommand}"')
+
     return LogDriver
 
 def executeThe(log : LogDriver,**kwargs) -> LogDriver:

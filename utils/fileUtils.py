@@ -1,8 +1,18 @@
 from glob import glob
-from testConfig import config
 import os
+from os.path import basename
+from os.path import join
+from os.path import normpath
+import shutil
 
 def deleteFiles(PathDirectory,Pattern):
-    CSVFiles=glob(f'{config[PathDirectory][0]}\\{Pattern}')
-    for File in CSVFiles:
-        os.remove(File)
+	Files=glob(join(PathDirectory,Pattern))
+	for File in Files:
+		os.remove(File)
+
+def copyFiles(srcFolder, dstFolder):
+    for file in glob(join(f'{srcFolder}','*')):
+        shutil.copy(
+            src=file,
+            dst=join(dstFolder,basename(normpath(file)))
+        )

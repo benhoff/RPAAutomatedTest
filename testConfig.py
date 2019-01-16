@@ -12,10 +12,10 @@ import getpass
 config = {
     'BASE_DIR':os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     'RPA_TOOl':'AutomationAnywhere',
-    'AA_TASK_NAME':'1.Office365Loggin',
+    'AA_TASK_NAME':'3.sendEmails',
     'LOG_PATH':f'C:\\Users\\{getpass.getuser()}\\Documents\\Automation Anywhere Files\\Automation Anywhere\\My Tasks\\DAPI Template AA2\\N00XX\\1.O365Login\\Logs\\',
     'RPA_TASK_FOLDER':f'C:\\Users\\{getpass.getuser()}\\Documents\\Automation Anywhere Files\\Automation Anywhere\\My Tasks\\DAPI Template AA2\\N00XX\\1.O365Login\\',
-    'TEST_RESULTS_FOLDER': ['']
+    'TEST_RESULTS_FOLDER': [f'C:\\Users\\{getpass.getuser()}\\Documents\\Automation Anywhere Files\\Automation Anywhere\\My Tasks\\DAPI Template AA2\\N00XX\\1.O365Login\\Temps\\']
 }
 
 
