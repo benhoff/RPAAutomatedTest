@@ -8,10 +8,10 @@ Feature: Read the mails from mails.xlsx
 
     Scenario Outline: Read <File> and create tempfiles with :<first> as data
 
-        Given Robot runs <task> for <File>
+        Given Robot runs <task>
         When Robot read the row until get the data: <last>
         Then Robot creates <n> files in tempData
 
         Examples:
-        |   task                        | File        | last                                                             | n |
-        |   2.excelReader.atmx          | Mails.xlsx  | Row 8 with data: mail02@test.com Test Workshop  TF00000018.xlsx  | 6 |
+        |   task                        | File        | last                                                                    | n |
+        |   1.excelReader.atmx          | Mails.xlsx  | Row 8 with data: mail02@test.com Test Workshop numer 9 TF00000018.xlsx  | 6 |
