@@ -16,3 +16,9 @@ def copyFiles(srcFolder, dstFolder):
             src=file,
             dst=join(dstFolder,basename(normpath(file)))
         )
+
+def copyFile(srcFile, dstFile):
+    shutil.copy(
+        src=srcFile,
+        dst=dstFile
+    )
