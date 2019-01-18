@@ -14,12 +14,6 @@ def runRPATask(**usingAndLogginIn):
     deafultRPATool=config['RPA_TOOl']
     logFilePath=config['LOG_PATH']
     sys.path.append(config['BASE_DIR'])
-    try:
-        if usingAndLogginIn['using'] and usingAndLogginIn['andLogginIn']:
-            deafultRPATool=usingAndLogginIn['using']
-            logFilePath=usingAndLogginIn['andLogginIn']
-    except KeyError:
-        pass
     if 'uipath' in deafultRPATool.lower():
         if is_tool(f'C:\\Users\\{getpass.getuser()}\\AppData\\Local\\UiPath\\UiPath.Agent.exe') and os.path.isdir(logFilePath):
             return LogDriver
