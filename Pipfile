@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 pandas = "*"
+xlrd = "*"
 
 [packages]
 behave = "==1.2.6"
