@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 pandas = "*"
 xlrd = "*"
+flake8 = "*"
 
 [packages]
 behave = "==1.2.6"
