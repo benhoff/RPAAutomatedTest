@@ -4,4 +4,4 @@ python:
 install:
   - pip install flake8
 script:
-  - python -m test/flake8
+  - python -m flake8 test
