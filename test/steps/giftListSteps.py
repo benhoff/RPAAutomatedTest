@@ -29,7 +29,7 @@
 
 # @then(u'All the process should be in {one} state')
 # def step_impl(context,one):
-    
+
 #     Robot.should(
 #         finishTheExecution,inState=one
 #         )
