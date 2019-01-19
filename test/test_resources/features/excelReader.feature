@@ -15,4 +15,4 @@
 
 #         Examples:
 #         |   task                        | File        | testdatafile | last                                                                    | n |
-#         |   1.excelReader.atmx          | Mails.xlsx  | Mails1.xlsx   | Row 8 with data: mail02@test.com Test Workshop numer 9 TF00000018.xlsx  | 6 |
+#         |   1.excelReader.atmx          | Mails.xlsx  | Mails1.xlsx  | Row 8 with data: mail02@test.com Test Workshop numer 9 TF00000018.xlsx  | 6 |
