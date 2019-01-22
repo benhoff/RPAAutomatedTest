@@ -1,0 +1,11 @@
+{
+    "project_name": "excel Writer task",
+    "RPA_tool": ["AutomationAnywhere","UIPath"],
+    "RPA_task_extension": [".atmx",".xaml"],
+    "RPA_task_name": "4.excelWriter",
+    "Robot_task_feature_description":"Very very short description about what this task should do",
+    "Task_dir_folder": "",
+    "robot_outputs_folder": "",
+    "log_file_path": "",
+    "test_resources_dir_folder":"\\\\test\\\\test_resources\\\\"
+}
